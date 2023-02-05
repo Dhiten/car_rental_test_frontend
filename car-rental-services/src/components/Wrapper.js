@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const Wrapper = props => {
     return (
         <>
@@ -19,9 +21,10 @@ export const Wrapper = props => {
                     <div class="position-sticky pt-3 sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            Autos
-                        </a>
+                            <Link class="nav-link" aria-current="page" to="/">Vehicles</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link" to="/people">People</Link>
                         </li>
                     </ul>
                     </div>
