@@ -26,6 +26,9 @@ export const Wrapper = props => {
                         <li class="nav-item">
                             <Link class="nav-link" to="/people">People</Link>
                         </li>
+                        <li>
+                            <Link class="nav-link" to="/rentals">Rentals</Link>
+                        </li>
                     </ul>
                     </div>
                 </nav>
