@@ -45,10 +45,11 @@ export const People = () => {
                           <td>{person.id}</td>
                           <td>{person.name}</td>
                           <td>{person.last_name}</td>
+                          <td>{person.date_of_birth}</td>
                           <td>{person.identification}</td>
+                          <td>{person.profession}</td>
                           <td>{person.married}</td>
                           <td>{person.monthly_income}</td>
-                          <td><Link to={'/people/create'} className="btn btn-primary">Edit</Link></td>
                           <td><button class="btn btn-danger" onClick={e =>del(person.id)}>Delete</button></td>
                        </tr>
                   }

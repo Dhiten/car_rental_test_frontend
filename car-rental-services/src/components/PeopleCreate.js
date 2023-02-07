@@ -9,7 +9,7 @@ const [last_name, setLastName] = useState("");
 const [date_of_birth, setDate_of_birth] = useState("");
 const [identification, setIdentification] = useState("");
 const [profession, setProfession] = useState("");
-const [married, setMarried] = useState("");
+const [married, setMarried] = useState(false);
 const [monthly_income, setMonthly_income] = useState("");
 const navigate = useNavigate();
 
@@ -47,8 +47,11 @@ return <Wrapper>
         </div>
         <div className="form-floating mb-3">
             <input type="date" className="form-control" id="Date_of_birth" placeholder="Date of birth" 
-            onChange={e=> setDate_of_birth(e.target.value)}/>
-            <label htmlFor="Date_of_birth">Doors</label>
+            onChange={e=> {
+                let datetemp= new Date(e.target.value);
+                let tempo =  [datetemp.getMonth() + 1, datetemp.getDate(), datetemp.getFullYear()].join('/');
+                setDate_of_birth(tempo)}}/>
+            <label htmlFor="Date_of_birth">Date of birth</label>
         </div>
         <div className="form-floating mb-3">
             <input type="text" className="form-control" id="Identification" placeholder="Identification"
@@ -62,7 +65,8 @@ return <Wrapper>
         </div>
         <div className="form-floating mb-3">
             <input type="bool" className="form-control" id="Married" placeholder="Married" 
-            onChange={e=> setMarried(e.target.value)}/>
+            onChange={e=> {let de = e.target.value.toLowerCase() === 'YES' ? true : false;
+                setMarried(de)}}/>
             <label htmlFor="Married">Married</label>
         </div>
         <div className="form-floating mb-3">

@@ -1,10 +1,12 @@
 import {useState} from "react";
 import {Wrapper} from "./Wrapper";
 // import {Dropdown} from "./Dropdown";
+import { useNavigate } from "react-router-dom";
 
 export const CreateRental = () => {
     const [person, setPerson] = useState('');
     const [vehicle, setVehicle] = useState('');
+    const navigate = useNavigate();
     // const [people, setPeople] = useState([]);
     // const [vehicles, setVehicles] = useState([]);
     // useEffect(() => {
@@ -30,7 +32,8 @@ export const CreateRental = () => {
                 active: true
             })
         });
- 
+        
+    await navigate(-1);
     }
 
     return <Wrapper>

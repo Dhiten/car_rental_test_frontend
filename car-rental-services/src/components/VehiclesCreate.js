@@ -57,11 +57,11 @@ return <Wrapper>
             onChange={e=> setPlate(e.target.value)}/>
             <label htmlFor="plate">Plate</label>
         </div>
-        <div className="form-floating mb-3">
+        {/* <div className="form-floating mb-3">
             <input type="text" className="form-control" id="people" placeholder="People" 
             onChange={e=> setPeople(e.target.value)}/>
             <label htmlFor="people">People</label>
-        </div>
+        </div> */}
         <button className="btn btn-primary">Submit</button>
     </form>
     </Wrapper>
